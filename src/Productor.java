@@ -21,6 +21,7 @@ public class Productor implements Runnable {
 				sharedLocation.blockingPut(count); //Aqui se establece el valor del buffer compartido
 
 				sum += count; 
+				System.out.println("_________________________P");
 				System.out.printf("\t%2d%n", sum);//total de todos los valores producidos
 			}
 			catch (InterruptedException exepcion) {
@@ -28,6 +29,7 @@ public class Productor implements Runnable {
 			}
 
 		}//for
-		System.out.printf( "Producer done producing%nTerminating Producer%n");
+		//Esta es la cadena de texto que se va a imprimir. Contiene dos mensajes separados por saltos de línea (%n).
+		System.out.printf( "El productor termino de producir %n ---El productor termino---%n");
 	}//run
 }//class
